@@ -1,0 +1,27 @@
+name: 'CICD Action'
+description: 'Github CICD Readme sync'
+author: 'Flamy Li'
+
+inputs:
+  GITHUB_TOKEN:
+    description: 'GitHub token'
+    required: true
+  OAH_CLI_TOKEN:
+    description: 'OAH Cli token'
+    required: true
+  README_LOC:
+    description: 'location of Readme file'
+    required: true
+  SWAGGER_LOC:
+    description: 'location of Swagger file'
+    required: true
+  OAH_API_ID:
+    description: 'OAH API ID'
+    required: true
+  OAH_CICD_API_BASE_URL:
+    description: 'OAH CICD API Base URL'
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'index.js'
