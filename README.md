@@ -21,24 +21,22 @@ Please Create Action Secret and store `OAH_CLI_TOKEN` and `OAH_API_ID` instead o
 
 ### Github Actions
 
-* This is a complete `.github/workflow/sync.yml` example.
-
-Set the `now-project-id` and `now-org-id` you found above.
+* This is a complete `.github/workflow/oah-api-sync.yml` example.
 
 ```yaml
-name: Sync file
-
+name: My OpenAPIHub API CICD Update Job
+ 
 on:
   push:
     branches:
-      - master
-
+      - main
+ 
 jobs:
-  test:
+  openapihub-api-file-sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: flamyitcat/github-api-sync@v1.0.0
+      - uses: OpenAPIHub/github-api-sync@v1.0.0
         with:
           OAH_CLI_TOKEN: ${{secrets.OAH_CLI_TOKEN}}
           OAH_API_ID: ${{secrets.OAH_API_ID}}
