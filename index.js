@@ -14260,7 +14260,7 @@ const { context = {} } = github;
 /* Input Variable */
 const OAH_CLI_TOKEN = core.getInput('OAH_CLI_TOKEN');
 const OAH_API_ID = core.getInput('OAH_API_ID');
-const OAH_CICD_API_BASE_URL = 'https://cicd-api.alpha.openapihub.com';
+const OAH_CICD_API_BASE_URL = 'https://cicd-api.openapihub.com';
 const README_LOC = core.getInput('README_LOC') || './openapihub/readme.md';
 const SWAGGER_LOC = core.getInput('SWAGGER_LOC') || './openapihub/swagger.json';
 
